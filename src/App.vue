@@ -1,29 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <span class="title">Time is gold</span>
+    <span class="sub-title">How much a meeting can cost you</span>
     <router-view/>
   </div>
 </template>
 
 <style lang="less">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+* {
+  padding: 0;
+  margin: 0;
 }
+div {
+  box-sizing: border-box;
+}
+  .title {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+  }
+  .sub-title {
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+  }
 </style>

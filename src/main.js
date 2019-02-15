@@ -2,8 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import './registerServiceWorker'
+import EventBus from './eventBus'
 
 Vue.config.productionTip = false
+Vue.prototype.$eventHandler = EventBus
 
 new Vue({
   router,
