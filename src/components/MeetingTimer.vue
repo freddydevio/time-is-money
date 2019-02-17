@@ -10,6 +10,7 @@
     </div>
 </template>
 
+<!-- https://codesandbox.io/s/yvnxwn161j?from-embed -->
 <script>
     let timer;
 
