@@ -3,9 +3,9 @@
         <span class="current-costs">{{currentCosts|formatCosts}}</span>
         <span class="current-time">{{currentTime|formatTime}}</span>
         <div class="actions">
-            <span class="button" v-on:click="toggleWorking" v-if="!working">Start</span>
-            <span class="button" v-on:click="toggleWorking" v-if="working">Stop</span>
-            <span class="button" v-on:click="reset">Restart</span>
+            <div class="button" v-on:click="toggleWorking" v-if="!working"><span class="label">Start</span></div>
+            <div class="button" v-on:click="toggleWorking" v-if="working"><span class="label">Stop</span></div>
+            <div class="button" v-on:click="reset"><span class="label">Restart</span></div>
         </div>
     </div>
 </template>
@@ -13,6 +13,7 @@
 <!-- https://codesandbox.io/s/yvnxwn161j?from-embed -->
 <script>
     let timer;
+    const secondsInYear = 7.5 * 5 * 52.1429 * 60 * 60
 
     export default {
         name: 'MeetingTimer',
@@ -37,7 +38,6 @@
                 clearInterval(timer)
             },
             calculateCosts() {
-                const secondsInYear = 7.5 * 5 * 52.1429 * 60 * 60
                 let participants = JSON.parse(localStorage.getItem('participants')),
                     totalSalary = 0
 
@@ -84,11 +84,23 @@
             align-items: center;
             justify-content: center;
         }
+        .current-costs {
+            font-size: 4rem;
+        }
+        .current-time {
+            font-size: 1.2rem;
+        }
         .button {
-            padding: 1rem;
             background: black;
             color: white;
             margin: 1rem;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            border: .1rem solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
         }
     }

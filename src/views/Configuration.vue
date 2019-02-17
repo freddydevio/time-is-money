@@ -25,6 +25,5 @@
 
 <style scoped lang="less">
     .configuration {
-
     }
 </style>

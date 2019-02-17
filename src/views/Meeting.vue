@@ -1,9 +1,8 @@
 <template>
     <div class="meeting">
-
         <MeetingTimer/>
-        <router-link to="/">
-            <span>Start again</span>
+        <router-link to="/" class="back-button">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
         </router-link>
     </div>
 </template>
@@ -20,11 +19,5 @@
 
 <style lang="less">
     .meeting {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
     }
 </style>
